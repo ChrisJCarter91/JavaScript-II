@@ -24,22 +24,38 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 */
 
+function higherOrderFunction() {
+  return `I am in the higher order function!`;
+}
+
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  return items.length;
 }
+
+console.log(getLength());
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  return (items[4]);
 }
+
+console.log(last());
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return x + y;
 }
+
+console.log(sumNums(2,4));
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return x * y;
 }
+
+console.log(multiplyNums(2,4));
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.

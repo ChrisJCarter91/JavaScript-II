@@ -55,9 +55,8 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
-let fullName = [];
 
-runners.forEach(function(currentValue) {
+let fullName = runners.forEach(function(currentValue) {
     console.log(currentValue.first_name, currentValue.last_name);
   });
 
@@ -91,6 +90,20 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 
+// If you needed to email the participants of the event:
+
+let email = runners.forEach(function(currentValue) {
+    console.log(currentValue.email);
+  });
+
 // Problem 2
+
+// To see who the High Value donors were:
+
+let largeDonor = runners.filter(function(currentValue) {
+    return currentValue.donation > 100; 
+});
+
+console.log(largeDonor);
 
 // Problem 3

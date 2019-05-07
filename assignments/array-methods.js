@@ -107,3 +107,9 @@ let largeDonor = runners.filter(function(currentValue) {
 console.log(largeDonor);
 
 // Problem 3
+
+//Which companies have runners:
+
+let companyRunners = runners.forEach(function(currentValue) {
+    console.log(currentValue.company_name);
+  });

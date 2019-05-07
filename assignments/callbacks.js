@@ -31,17 +31,24 @@ function higherOrderFunction() {
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
-  return items.length;
+  return cb(items.length);
 }
+getLength(items, function(length){
+console.log(length);
+})
 
-console.log(getLength());
+// console.log(getLength());
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
-  return (items[4]);
+  return cb(items[items.length-1]);
 }
 
-console.log(last());
+last(items, function(lastItem){
+console.log(lastItem);
+})
+
+// console.log(last());
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
